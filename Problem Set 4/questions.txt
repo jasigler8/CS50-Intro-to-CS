@@ -1,0 +1,33 @@
+0.  JPG - ~16,000,000, GIF - 256, PNG - ~16,000,000, BMP - ~16,000,000
+1.  GIF supports animation
+2.  Lossy Compression doesn't encode all the information from the file, so when it's recovered, it's not an exact representation, but allows for 
+    greater compression and thus smaller file sizes. Better for photographs. Lossless maintains all information about a file.
+3.  JPEG use lossy compression
+4.  Two things:
+    1. The system modifies the filename's first character to signal that it has
+       been deleted and that the directory entry can be recycled.
+       (Most OSs simply remove the file's reference from the containing dir.)
+    2. The system moves all of the file's FAT clusters to the hard drive's list
+       of free clusters.
+    The file's data is never touched.
+5.  Write NUL bytes (or random characters) to every address on the disk.
+    There's consensus that "overwriting a disk with a few random passes" is sufficient
+6.  It's the library contains simple data types that are defined by either a C/C++ typedef or #define statement.
+7.  You can choose exactly how big to make your types
+8.  BYTE -  8 bits/1 byte
+    DWORD  - 32 bits/4 bytes
+    LONG - 32 bits/4 bytes
+    WORD - 16 bits/2 bytes
+9.  it must be in the type BITMAPHEADERFILE for bftype
+    hexadecimal: 0x424d
+    ASCII: BM
+10. bfSize is the number of bytes for the file, biSize is the number of bytes for the header (BM is 40)
+11. if biheight is negative, then the file should be read topdown and cannot be compressed
+12. biBitCount
+13. If it can't find the file or open it
+14. Because we are always reading 1 struc at a time
+15. (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4
+    (4 - ((3*3%4)%4)) = 4-2 = 2
+16. fseek changes the offset of the file pointer, i.e. if you want to skip padding
+17. SeekCurr is the current position of the pointer
+18. Rick Rolled Guy
